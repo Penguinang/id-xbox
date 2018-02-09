@@ -51,9 +51,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ypb\chip\ChipsManager.cs" />
+     <Compile Include="Assets\Scripts\ypb\chip\Collect.cs" />
      <Compile Include="Assets\Scripts\ypb\chip\Move.cs" />
+     <Compile Include="Assets\Scripts\ypb\chip\Relation.cs" />
      <Compile Include="Assets\Scripts\ypb\chip\RotateController.cs" />
+     <Compile Include="Assets\Scripts\ypb\chip\Symmetry.cs" />
+     <Compile Include="Assets\Scripts\ypb\game\CollectionBar.cs" />
+     <Compile Include="Assets\Scripts\ypb\game\Completion.cs" />
      <Compile Include="Assets\Scripts\ypb\game\Game.cs" />
+     <Compile Include="Assets\Scripts\ypb\game\IconTip.cs" />
+     <Compile Include="Assets\Scripts\ypb\game\Jigsaw.cs" />
+     <Compile Include="Assets\Scripts\ypb\game\Line.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/opt/UnityBeta/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

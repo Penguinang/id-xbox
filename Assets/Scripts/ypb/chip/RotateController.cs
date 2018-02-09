@@ -9,13 +9,6 @@ namespace Chip {
         private bool rotating = false;
         private Transform operatingChip;
         private Vector3 right;
-        private List<Transform> chips;
-
-        void Start() {
-            chips = new List<Transform>();
-            for (int i = 0; i < transform.childCount; i++)
-                chips.Add(transform.GetChild(i));
-        }
 
         // Update is called once per frame
         void Update() {
@@ -59,12 +52,14 @@ namespace Chip {
             Vector2 origin = (touch1 + touch0) / 2;
             float radius = Vector2.Distance(touch0, origin);
 
-            foreach (Transform chip in chips) {
-                float distance = Vector2.Distance(chip.position, origin);
+            // List<Transform> chips = ChipsManager.GetChips();
+            List<GameObject> chips = CollectionBar.instance.GetChips();
+            foreach (GameObject chip in chips) {
+                float distance = Vector2.Distance(chip.transform.position, origin);
                 if (distance > radius)
                     continue;
                 if (distance < minDistance) {
-                    result = chip;
+                    result = chip.transform;
                     minDistance = distance;
                 }
             }
