@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class IconTip : MonoBehaviour {
     public Text Number;
+    public GameObject Tip;
     private int cost = 0;
 
     public void PromptHandler(){
@@ -13,7 +14,11 @@ public class IconTip : MonoBehaviour {
     }
 
     private void ShowPicture(){
-
+        Tip.SetActive(true);
+        Invoke("HidePicture",3);
+    }
+    private void HidePicture(){
+        Tip.SetActive(false);
     }
     private void CostTip(){
         cost ++;

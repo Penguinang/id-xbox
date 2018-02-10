@@ -20,7 +20,8 @@ namespace Chip{
         }
         void Update(){
             transform.position = new Vector3(-TraceChip.position.x,TraceChip.position.y,TraceChip.position.z);
-            transform.rotation = TraceChip.rotation;
+            // transform.rotation = TraceChip.rotation;
+            transform.eulerAngles = -TraceChip.eulerAngles;
         }
         
     }
