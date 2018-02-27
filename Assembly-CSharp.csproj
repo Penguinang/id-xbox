@@ -51,18 +51,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ypb\audio\DontDestroyOnLoad.cs" />
      <Compile Include="Assets\Scripts\ypb\chip\ChipsManager.cs" />
      <Compile Include="Assets\Scripts\ypb\chip\Collect.cs" />
      <Compile Include="Assets\Scripts\ypb\chip\Move.cs" />
      <Compile Include="Assets\Scripts\ypb\chip\Relation.cs" />
      <Compile Include="Assets\Scripts\ypb\chip\RotateController.cs" />
      <Compile Include="Assets\Scripts\ypb\chip\Symmetry.cs" />
+     <Compile Include="Assets\Scripts\ypb\game\CameraFade.cs" />
      <Compile Include="Assets\Scripts\ypb\game\CollectionBar.cs" />
      <Compile Include="Assets\Scripts\ypb\game\Completion.cs" />
      <Compile Include="Assets\Scripts\ypb\game\Game.cs" />
      <Compile Include="Assets\Scripts\ypb\game\IconTip.cs" />
      <Compile Include="Assets\Scripts\ypb\game\Jigsaw.cs" />
      <Compile Include="Assets\Scripts\ypb\game\Line.cs" />
+     <Compile Include="Assets\Scripts\ypb\game\TextTip.cs" />
+     <Compile Include="Assets\Scripts\ypb\menu\DataLoader.cs" />
+     <Compile Include="Assets\Scripts\ypb\menu\Enter.cs" />
+     <Compile Include="Assets\Scripts\ypb\menu\LoadMission.cs" />
+     <Compile Include="Assets\Scripts\ypb\menu\ShowMissionDetail.cs" />
+     <None Include="Assets\shader\Edge.shader" />
+     <None Include="Assets\shader\Whiten.shader" />
+     <None Include="Assets\shader\SceneFade.shader" />
+     <None Include="Assets\shader\Blur.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/opt/UnityBeta/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

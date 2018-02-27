@@ -16,13 +16,13 @@ namespace Chip {
             }
         }
 
-        void OnMouseUp() {
-            if (collected)
-                return;
-            CollectionBar.Collect(gameObject);
-            collected = true;
-            pack();
-        }
+        // void OnMouseUp() {
+        //     if (collected)
+        //         return;
+        //     CollectionBar.Collect(gameObject);
+        //     collected = true;
+        //     pack();
+        // }
 
 
         public void MoveTo(Vector2 position) {

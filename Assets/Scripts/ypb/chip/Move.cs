@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Chip {
     public class Move : MonoBehaviour {
         private Vector2 bias;
-        public delegate void OnMoveHandler();
+        public delegate void OnMoveHandler(GameObject chip);
         private event OnMoveHandler onMoveEvent;
 
         void OnMouseDown() {
@@ -17,7 +17,7 @@ namespace Chip {
 
             bias = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            onMoveEvent();
+            onMoveEvent(gameObject);
         }
 
         void OnMouseDrag() {
@@ -29,7 +29,7 @@ namespace Chip {
             Vector2 newPosition = new Vector3(mouse.x, mouse.y, transform.position.z) + new Vector3(bias.x, bias.y, 0);
             rigidbody.MovePosition(newPosition);
 
-            onMoveEvent();
+            onMoveEvent(gameObject);
         }
 
         void OnMouseUp() {
@@ -37,7 +37,7 @@ namespace Chip {
             rigidbody.bodyType = RigidbodyType2D.Kinematic;
             rigidbody.freezeRotation = false;
 
-            onMoveEvent();
+            onMoveEvent(gameObject);
         }
 
         public void Subscribe(OnMoveHandler f){

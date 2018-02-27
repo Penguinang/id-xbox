@@ -53,13 +53,14 @@ namespace Chip {
             float radius = Vector2.Distance(touch0, origin);
 
             // List<Transform> chips = ChipsManager.GetChips();
-            List<GameObject> chips = CollectionBar.instance.GetChips();
-            foreach (GameObject chip in chips) {
-                float distance = Vector2.Distance(chip.transform.position, origin);
+            // List<GameObject> chips = CollectionBar.instance.GetChips();
+            List<Transform> chips = ChipsManager.GetChips();
+            foreach (Transform chip in chips) {
+                float distance = Vector2.Distance(chip.position, origin);
                 if (distance > radius)
                     continue;
                 if (distance < minDistance) {
-                    result = chip.transform;
+                    result = chip;
                     minDistance = distance;
                 }
             }

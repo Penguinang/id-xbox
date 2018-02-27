@@ -6,11 +6,16 @@ using UnityEngine.UI;
 public class IconTip : MonoBehaviour {
     public Text Number;
     public GameObject Tip;
-    private int cost = 0;
+    private int rest = 3;
+    public Sprite[] sprites;
 
     public void PromptHandler(){
         CostTip();
         ShowPicture();
+    }
+
+    public int GetCost(){
+        return rest;
     }
 
     private void ShowPicture(){
@@ -21,7 +26,9 @@ public class IconTip : MonoBehaviour {
         Tip.SetActive(false);
     }
     private void CostTip(){
-        cost ++;
-        Number.text = cost.ToString();
+        rest --;
+        if(rest < 0)
+            rest = 0;
+        GetComponent<Image>().sprite = sprites[rest];
     }
 }
